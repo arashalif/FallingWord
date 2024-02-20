@@ -19,7 +19,7 @@ This project implements a trivia game application using the Clean MVVM architect
 
 
 
-## Time Spent
+## Time Spent [![wakatime](https://wakatime.com/badge/user/b0875c57-3929-42f4-ac0a-9407f2d21f5f/project/018dc478-e3f0-4450-b46d-1551dfcc13fb.svg)](https://wakatime.com/badge/user/b0875c57-3929-42f4-ac0a-9407f2d21f5f/project/018dc478-e3f0-4450-b46d-1551dfcc13fb)
 
 Approximately 6:15 hours were spent on this project:
 
