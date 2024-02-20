@@ -65,9 +65,9 @@ dependencies {
 
 
 //    Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
 
     // data store
     implementation("androidx.datastore:datastore-preferences:1.0.0")
@@ -80,8 +80,27 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-//    Test
+//    JUnit and Mockito for unit testing
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
+
+//    Coroutines test dependencies for testing suspend functions
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+
+//    Mockk for mocking objects in Kotlin
+    testImplementation("io.mockk:mockk:1.12.0")
+
+//    Kotlinx serialization for JSON serialization/deserialization
+    testImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+
+//    AndroidX core testing library for LiveData and other architecture components testing
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+//    Jetpack compose testing dependencies
+    testImplementation("androidx.compose.ui:ui-test-junit4:1.6.1")
+
+
+//    instrumental test
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
