@@ -18,7 +18,9 @@ class GameRepositoryImpl @Inject constructor(
 
     override suspend fun fetchWords(): Flow<BaseResponse<List<Word>>> = wordsDataSource.fetchWords()
 
-    override suspend fun fetchTotalStats(): Flow<BaseResponse<Stats>>  = gameDataStore.getStats()
+    override suspend fun fetchTotalStats(): Flow<BaseResponse<Stats>>  {
+        return gameDataStore.getStats()
+    }
     override suspend fun saveTotalStats(stats: Stats) {
         gameDataStore.saveStats(stats)
     }

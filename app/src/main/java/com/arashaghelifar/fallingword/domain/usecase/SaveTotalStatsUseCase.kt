@@ -5,6 +5,7 @@ import com.arashaghelifar.fallingword.domain.mapper.GameToStatsMapper
 import com.arashaghelifar.fallingword.domain.model.Game
 import com.arashaghelifar.fallingword.domain.repository.GameRepository
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.take
 import javax.inject.Inject
 
 /**
@@ -30,7 +31,7 @@ class SaveTotalStatsUseCase @Inject constructor(
      * @param game The current game session to be included in the total statistics.
      */
     suspend operator fun invoke(game: Game) {
-        gameRepository.fetchTotalStats().collectLatest {
+        gameRepository.fetchTotalStats().take(1).collectLatest {
             if (it is BaseResponse.Success) {
                 saveGameUseCase(Game())
                 val aggregatedStats = it.data + GameToStatsMapper.map(game)

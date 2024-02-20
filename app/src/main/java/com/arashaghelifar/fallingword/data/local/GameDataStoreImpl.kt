@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.mapLatest
 import javax.inject.Inject
 
 class GameDataStoreImpl @Inject constructor(
@@ -27,13 +28,13 @@ class GameDataStoreImpl @Inject constructor(
     private val gson = Gson()
 
     override fun getStats(): Flow<BaseResponse<Stats>> = flow {
-        emit(BaseResponse.Loading)
         emitAll(
             dataStore.data
                 .catch {
                     BaseResponse.Error(error = it.message ?: "Somethings wrong with IO")
                 }
-                .map {
+                .mapLatest {
+                    println("########")
                     if (it[PreferencesKeys.STATS_DATASTORE_KEY] != null) {
                         BaseResponse.Success(
                             gson.fromJson(
