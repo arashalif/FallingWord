@@ -27,6 +27,18 @@ Approximately 6:15 hours were spent on this project:
 - 3 hours for implementing domain and data layers.
 - 2.5 hours for implementing UI components.
 
+Top 10 classes I spent most time:
+- 35 mins	…iousGameStatsUseCaseTest.kt 
+- 17 mins	…se/SaveTotalStatsUseCase.kt 
+- 16 mins	app/build.gradle.kts 
+- 14 mins	…e/InitialGameUseCaseTest.kt 
+- 13 mins	…/local/GameDataStoreImpl.kt 
+- 11 mins	https://readme.so 
+- 9 mins	…PreviousGameStatsUseCase.kt 
+- 8 mins	…a/GameRepositoryImplTest.kt 
+- 7 mins	…/data/GameRepositoryImpl.kt 
+- 6 mins	…mote/WordsDataSourceImpl.kt 
+
 ## Why I Solved The Problem In This Particular Way
 
 ### Repository Design Pattern and Separating Domain Layer
