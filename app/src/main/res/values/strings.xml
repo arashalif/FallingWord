@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FallingWord</string>
+
+    <!--start Screen-->
+    <string name="startScreen_failedToLoadData">Failed to load data</string>
+    <string name="startScreen_retry">Retry</string>
+    <string name="startScreen_totalGame">Total Game: %1$s</string>
+    <string name="startScreen_feedback">Feedback</string>
+
 </resources>
