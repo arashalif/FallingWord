@@ -18,4 +18,15 @@ data class Stats(
     val remainingCount : Int = 0,
     val scoreCount: Long = 0,
     val gameCount:Int = 0
-)
+){
+    operator fun plus(other: Stats): Stats {
+        return Stats(
+            questionCount + other.questionCount,
+            questionPlayedCount + other.questionPlayedCount,
+            correctCount + other.correctCount,
+            remainingCount + other.remainingCount,
+            scoreCount + other.scoreCount,
+            gameCount + other.gameCount
+        )
+    }
+}
