@@ -13,4 +13,18 @@ object Extension {
         val digest = md.digest(bytes)
         return digest.joinToString("") { "%02x".format(it) }
     }
+
+    /**
+     * Calculates the percentage of one integer relative to another.
+     *
+     * @param portion The portion value to calculate the percentage for.
+     * @return A string representation of the percentage.
+     */
+    fun Int.calculatePercentOf(portion : Int):String{
+        return if(this > 0){
+            "${((portion.toDouble() / this) * 100).toInt()}%"
+        }else{
+            "0%"
+        }
+    }
 }

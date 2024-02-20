@@ -4,7 +4,18 @@
     <!--start Screen-->
     <string name="startScreen_failedToLoadData">Failed to load data</string>
     <string name="startScreen_retry">Retry</string>
-    <string name="startScreen_totalGame">Total Game: %1$s</string>
+
     <string name="startScreen_feedback">Feedback</string>
+    <string name="startScreen_resumeGame">Resume Game</string>
+    <string name="startScreen_previousGame">Previous Game</string>
+
+    <string name="startScreen_totalGame">Total Game: %1$s</string>
+    <string name="startScreen_totalQuestion">Total Questions: %1$s</string>
+    <string name="startScreen_totalCorrect">Total Correct: %1$s </string>
+    <string name="startScreen_totalScore">Total Score: %1$s</string>
+    <string name="startScreen_QuestionPlayed">Questions played: %1$s</string>
+    <string name="startScreen_CorrectAnswer">Correct Answer: %1$s</string>
+    <string name="startScreen_gameProgress">Game Progress: %1$s</string>
+    <string name="startScreen_score">Score: %1$s</string>
 
 </resources>
