@@ -34,7 +34,6 @@ class GameDataStoreImpl @Inject constructor(
                     BaseResponse.Error(error = it.message ?: "Somethings wrong with IO")
                 }
                 .mapLatest {
-                    println("########")
                     if (it[PreferencesKeys.STATS_DATASTORE_KEY] != null) {
                         BaseResponse.Success(
                             gson.fromJson(
@@ -43,7 +42,9 @@ class GameDataStoreImpl @Inject constructor(
                             )
                         )
                     } else {
-                        BaseResponse.Success(Stats())
+                        BaseResponse.Success(Stats(
+                            gameCount = 0
+                        ))
                     }
                 })
     }

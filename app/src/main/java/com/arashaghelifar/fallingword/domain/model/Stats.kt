@@ -17,7 +17,7 @@ data class Stats(
     val correctCount : Int = 0,
     val remainingCount : Int = 0,
     val scoreCount: Long = 0,
-    val gameCount:Int = 0
+    val gameCount:Int = 1
 ){
     operator fun plus(other: Stats): Stats {
         return Stats(
