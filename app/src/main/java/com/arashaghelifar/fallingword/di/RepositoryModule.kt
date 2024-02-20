@@ -1,6 +1,8 @@
 package com.arashaghelifar.fallingword.di
 
 import com.arashaghelifar.fallingword.data.GameRepositoryImpl
+import com.arashaghelifar.fallingword.data.local.GameDataStore
+import com.arashaghelifar.fallingword.data.local.GameDataStoreImpl
 import com.arashaghelifar.fallingword.data.remote.WordsDataSource
 import com.arashaghelifar.fallingword.data.remote.WordsDataSourceImpl
 import com.arashaghelifar.fallingword.domain.repository.GameRepository
@@ -18,5 +20,8 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindWordsApi(repository: WordsDataSourceImpl): WordsDataSource
+
+    @Binds
+    abstract fun bindGameDataSource(repository: GameDataStoreImpl): GameDataStore
 
 }
