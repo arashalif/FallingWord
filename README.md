@@ -3,10 +3,12 @@
 
 This project implements a trivia game application using the Clean MVVM architecture pattern with Jetpack Compose in Kotlin. The application allows users to play trivia games, save their game progress, and view statistics from previous game sessions. It leverages various Android Jetpack libraries, Hilt for dependency injection, Retrofit for networking, and Jetpack Compose for building the user interface.
 
-
-
-
-
+<p float="left">
+  <img src="https://github.com/arashalif/FallingWord/assets/52599495/797e8821-62c4-4ad6-85eb-17d89d8c6138" width="200" height="400" />
+  <img src="https://github.com/arashalif/FallingWord/assets/52599495/1de05261-f293-45b5-9457-b1650f91768e" width="200" height="400" /> 
+  <img src="https://github.com/arashalif/FallingWord/assets/52599495/f16355a8-ada8-47b0-b0b8-371bf74d55f9" width="200" height="400" />
+  <img src="https://github.com/arashalif/FallingWord/assets/52599495/b675307d-6f55-4b16-9e1f-f7afc13fc5fc" width="200" height="400" />
+</p>
 
 ## Features
 
