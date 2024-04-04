@@ -12,52 +12,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    - uses: sparkfabrik/android-build-action@v1.5.0
-      with:
-        project-path: android
-        output-path: my-app.apk
-        browserstack-upload: false
-        ruby-version: "2.7.5"
-        fastlane-version: "2.220.0"
-        bundler-version: "2.3.26"
-        fastlane-env: "debug"
     
-    # - uses: actions/checkout@v4
-    #  # Set Current Date As Env Variable
-    # - name: Set current date as env variable
-    #   run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+    - uses: actions/checkout@v4
+     # Set Current Date As Env Variable
+    - name: Set current date as env variable
+      run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    #   # Set Repository Name As Env Variable
-    # - name: Set repository name as env variable
-    #   run: echo "repository_name=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
+      # Set Repository Name As Env Variable
+    - name: Set repository name as env variable
+      run: echo "repository_name=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
 
-    # - name: set up JDK 17
-    #   uses: actions/setup-java@v4
-    #   with:
-    #     java-version: '17'
-    #     distribution: 'temurin'
-    #     cache: gradle
+    - name: set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
 
-    # - name: Grant execute permission for gradlew
-    #   run: chmod +x gradlew
-    #    # Run Tests Build
-    # - name: Run gradle tests
-    #   run: ./gradlew testDebugUnitTest
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+       # Run Tests Build
+    - name: Run gradle tests
+      run: ./gradlew testDebugUnitTest
 
-    #   # Run Build Project
-    # - name: Build gradle project
-    #   run: ./gradlew build
+      # Run Build Project
+    - name: Build gradle project
+      run: ./gradlew build
 
-    #   # Create APK Debug
-    # - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
-    #   run: ./gradlew assembleDebug
+      # Create APK Debug
+    - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
+      run: ./gradlew assembleDebug
 
-    #    # Noted For Output [main_project_module]/build/outputs/apk/release/
-    # - name: Upload APK Debug - ${{ env.repository_name }}
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-    #     path: ${{ env.main_project_module }} /build/outputs/apk/debug/
+       # Noted For Output [main_project_module]/build/outputs/apk/release/
+    - name: Upload APK Debug - ${{ env.repository_name }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+        path: ${{ env.main_project_module }} /build/outputs/apk/debug/
 
 
