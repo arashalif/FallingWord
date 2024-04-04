@@ -19,6 +19,7 @@ jobs:
         output-path: my-app.apk
         browserstack-upload: false
         ruby-version: "2.7.5"
+        fastlane-version: "2.220.0"
         bundler-version: "2.3.26"
         fastlane-env: "debug"
     
